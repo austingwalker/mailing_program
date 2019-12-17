@@ -3,46 +3,132 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 <title>Document</title>
 <style>
-    body {
+    /* body {
         background: #eee
+    } */
+    #wrapper{
+        padding: 20px;
+        background: #eee;
+        width: 500px;
     }
-    #container {
-        text-align: center;
-        padding: 10px;
+    .learnMoreBtn {
+        background: rgb(187, 187, 187);
+        color: white;
+        font-family: arial;
+        font-size: 16px;
+        border: none;
+        padding: 15px;
+        cursor: pointer;
     }
+    /* Dog vs Cat */
     #dogvscatBox {
+        padding: 20px;
+        margin:auto;
         text-align: center;
+        background: rgb(118, 77, 151)
     }
-    #dogvscatContent {
-        text-align: center;
+    #dogvscatTitle{
+        width: 100%;
+        font-family: arial;
+        font-size: 40px;
+        color: white;
     }
-    .box {
-        float:left;
+    #question{
+        font-family: arial;
+        font-size: 16px;
+        color: white;
+        vertical-align: top;
+        padding-top: 5%;
     }
+    /* Dog  */
+    #dogBox {
+        padding: 20px;
+        width: 100%;
+        margin:auto;
+        background: white
+    }
+    #dogContent{
+        vertical-align: top;
+        padding: 2.5%;
+        /* padding: 0px; */
+    }
+    #dogP{
+        color: rgb(90, 89, 89);
+        font-family: arial;
+    }
+    .dogIcon {
+        color:gray;
+        font-family: arial;
+        font-size: 14px;
+    }
+
+    /* Cat */
+    #catBox {
+        padding: 20px;
+        width: 100%;
+        margin:auto;
+        background: white
+    }
+    #catContent{
+        vertical-align: top;
+        padding: 2.5%;
+        /* padding: 0px; */
+    }
+    #catP{
+        color: rgb(90, 89, 89);
+        font-family: arial;
+    }
+    .catIcon {
+        color:gray;
+        font-family: arial;
+        font-size: 14px;
+    }
+
+    /* Turtle */
 </style>
 </head>
 <body>
-        <div id="container">
-            <div id="dogvscatBox">
-                <div id="dogvscatTitle">Dogs vs. Cats</div>
-                <div id="dogvscatContent">
-                    <div class="box" id="question">Who is our best friend? Let's Decide</div>
-                    <div class="box" id="dogvscatPic"><img src="cid:dogandcat"/></div>
-                </div>
-            </div>
-        </div>
-   {{!-- <table>
-       <tr>
-           <th>Dog vs. Cats</th>
-       </tr>
-        <tr>
-           <td>Who is our best friend? Let's Decide</td>
-           <td><img src="cid:dogandcat"/></td>
-       </tr>
-   </table> --}}
-
+   <div id="wrapper">    
+    <table id="dogvscatBox" align="center">
+        <tr id="dogvscatTitleRow" >
+            <td id="dogvscatTitle" >Dog vs. Cats</td>
+        </tr>
+            <tr id="dogvscatContentRow">
+            <td id="question">Who is our best friend? Let's Decide</td>
+            <!-- cid:dogandcat -->
+            <td id="dogandcatPicBox"><img id="dogandcatPic" src="https://via.placeholder.com/150"/></td>
+        </tr>
+    </table>
+    <table id="dogBox">
+            <tr id="dogRow">
+                <td id="dogPicBox"><img id="dogPic" src="https://via.placeholder.com/150"/></td>
+                <td id="dogContent">
+                    <p id="dogP">
+                        <strong>The love you get from a dog is unlike anythng else in the world, purer than human love.</strong>
+                    </p>
+                    <p class="dogIcon">🗸 Loyal</i></p>
+                    <p class="dogIcon">🗸 Playful</i></p>
+                    <p class="dogIcon">🗸 Your friend</i></p>
+                    <a href="https://en.wikipedia.org/wiki/Dog" target="blank"><button class="learnMoreBtn">Learn More</button></a>
+                </td>
+            </tr>
+    </table>
+    <table id="catBox">
+            <tr id="catRow">
+                <td id="catContent">
+                    <p id="catP">
+                        <strong>Cats are independent, so they're good pets to have if you don't have too much time at home to devote to one.</strong>
+                    </p>
+                    <p class="catIcon">🗸 Independent</i></p>
+                    <p class="catIcon">🗸 Quiet love</i></p>
+                    <p class="catIcon">🗸 Maintenance</i></p>
+                    <a href="https://en.wikipedia.org/wiki/Cat" target="blank"><button class="learnMoreBtn">Learn More</button></a>
+                </td>
+                <td id="catPicBox"><img id="catPic" src="https://via.placeholder.com/150"/></td>
+            </tr>
+    </table>
+   </div> 
 </body>
 </html>
