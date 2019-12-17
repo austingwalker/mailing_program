@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-import API from "../../utils/API";
 import Form from "../../components/Form";
+import "./Home.css";
 
 
 class Home extends Component {
@@ -8,19 +8,9 @@ class Home extends Component {
     test: {},
   };
 
-  // componentDidMount() {
-  //   API.getTest()
-  //     .then(res =>
-  //       this.setState({ test: res.data})
-  //     )
-  //     .catch(err => console.log(err));
-  // }
-
-  
-
   render() {
     return (
-      <div>
+      <div id="homeBox">
         <Form/>
       </div>
     );

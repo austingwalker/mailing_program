@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
-// import { Link } from "react-router-dom";
+import {Row, Col} from 'reactstrap';
+import "./Form.css"
 
 
 class Form extends Component {
@@ -64,56 +65,27 @@ class Form extends Component {
 
   render() {
     return (
-      <div>
-        <form>
-          {
-            this.state.emailType.map((type, i) => {
-             return( <div className="form-check">
-                <input className="form-check-input" type="checkbox" value={type.name} id={`check${i}`} checked={type.isChecked} onChange={this.handleCheck}/>
-                <label className="form-check-label" htmlFor={`check${i}`}>
-                  {type.name}
-                </label>
-              </div>
-            )})
-          }
-          {/* <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="all" id="defaultCheck1" onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck1">
-              All
-            </label>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="homenowtest@gmail.com" id="defaultCheck2" checked={}onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck2">
-              homenowtest@gmail.com
-            </label>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="homenowtest@outlook.com" id="defaultCheck3" onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck3">
-            homenowtest@outlook.com
-            </label>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="homenowtest@yahoo.com" id="defaultCheck4" onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck4">
-            homenowtest@yahoo.com
-            </label>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="homenowtest@aol.com" id="defaultCheck5" onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck5">
-            homenowtest@aol.com
-            </label>
-          </div>
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="homenowtest@homenow.io" id="defaultCheck6" onChange={this.handleCheck}/>
-            <label className="form-check-label" htmlFor="defaultCheck6">
-            homenowtest@homenow.io
-            </label>
-          </div> */}
-          <button type="submit" className="btn btn-primary addBtn" onClick={this.handleFormSubmit}>Email</button>
-        </form>
+      <div id="formBox">
+        <Row>
+          <Col className="col" md="3"/>
+          <Col className="col formCol" md="6">
+            <form id="form">
+              <label id="label">Select one or more address's to email:</label>
+              {
+                this.state.emailType.map((type, i) => {
+                return( <div className="form-check">
+                    <input className="form-check-input" type="checkbox" value={type.name} id={`check${i}`} checked={type.isChecked} onChange={this.handleCheck}/>
+                    <label className="form-check-label" htmlFor={`check${i}`}>
+                      {type.name}
+                    </label>
+                  </div>
+                )})
+              }
+              <button type="submit" className="btn btn-primary emailBtn" onClick={this.handleFormSubmit}>Email</button>
+            </form>
+          </Col>
+          <Col className="col" md="3"/>
+        </Row>
       </div>
     );
   }

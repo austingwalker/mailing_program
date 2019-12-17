@@ -1,0 +1,39 @@
+.row {
+    margin: 50px;
+}
+
+.col {
+    padding: 0px;
+}
+
+.formCol {
+    text-align: center;
+}
+
+#form {
+    display: inline-block;
+    text-align: left;
+    border: 1px solid rgb(13, 214, 197);
+    padding: 50px;
+    border-radius: 5%;
+    background: white;
+    color: gray;
+}
+
+#label {
+    margin-bottom: 30px;
+}
+
+.emailBtn {
+    background: rgb(13, 214, 197);
+    border: none;
+    width: 100%;
+    border-radius: 50px 50px;
+    margin-top: 30px;
+}
+
+.emailBtn:hover {
+    background: white;
+    color: rgb(13, 214, 197);
+    border: 1px solid rgb(13, 214, 197);
+}
