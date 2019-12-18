@@ -5,9 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Document</title>
 <style>
-    /* body {
-        background: #eee
-    } */
     #wrapper{
         padding: 20px;
         background: #eee;
@@ -22,18 +19,23 @@
         padding: 15px;
         cursor: pointer;
     }
+    /* .pic {
+        vertical-align: top;
+    } */
     /* Dog vs Cat */
     #dogvscatBox {
+        width: 100%;
         padding: 20px;
         margin:auto;
         text-align: center;
-        background: rgb(118, 77, 151)
+        background: rgb(118, 77, 151);
     }
     #dogvscatTitle{
         width: 100%;
         font-family: arial;
         font-size: 40px;
         color: white;
+        padding-bottom: 20px;
     }
     #question{
         font-family: arial;
@@ -52,11 +54,11 @@
     #dogContent{
         vertical-align: top;
         padding: 2.5%;
-        /* padding: 0px; */
     }
     #dogP{
         color: rgb(90, 89, 89);
         font-family: arial;
+        font-size: 16px;
     }
     .dogIcon {
         color:gray;
@@ -74,11 +76,11 @@
     #catContent{
         vertical-align: top;
         padding: 2.5%;
-        /* padding: 0px; */
     }
     #catP{
         color: rgb(90, 89, 89);
         font-family: arial;
+        font-size: 16px;
     }
     .catIcon {
         color:gray;
@@ -87,23 +89,65 @@
     }
 
     /* Turtle */
+    #turtleBox {
+        padding: 20px;
+        width: 100%;
+        margin:auto;
+        background: white
+    }
+    #turtleContent{
+        vertical-align: top;
+        padding: 2.5%;
+    }
+    #turtleP{
+        color: rgb(90, 89, 89);
+        font-family: arial;
+    }
+    #turtleTitle{
+        width: 100%;
+        font-family: arial;
+        font-size: 24px;
+        color: rgb(90, 89, 89);
+        text-align: center;
+    }
+    #turtleTitleSmall{
+        width: 100%;
+        font-family: arial;
+        font-size: 16px;
+        color: rgb(90, 89, 89);
+        padding: 20px;
+        text-align: center;
+    }
+    .turtleTitleRow{
+        padding: 100px;
+    }
+    .turtleLabel {
+        color:gray;
+        font-family: arial;
+        font-size: 16px;
+    }
+    .turtleInfo {
+        color:gray;
+        font-family: arial;
+        font-size: 14px;
+    }
 </style>
 </head>
 <body>
    <div id="wrapper">    
     <table id="dogvscatBox" align="center">
         <tr id="dogvscatTitleRow" >
-            <td id="dogvscatTitle" >Dog vs. Cats</td>
+            <td id="dogvscatTitle" Colspan="2">Dogs vs. Cats</td>
         </tr>
             <tr id="dogvscatContentRow">
             <td id="question">Who is our best friend? Let's Decide</td>
             <!-- cid:dogandcat -->
-            <td id="dogandcatPicBox"><img id="dogandcatPic" src="https://via.placeholder.com/150"/></td>
+            <td id="dogandcatPicBox"><img class="pic" id="dogandcatPic" src="https://via.placeholder.com/150"/></td>
         </tr>
     </table>
     <table id="dogBox">
             <tr id="dogRow">
-                <td id="dogPicBox"><img id="dogPic" src="https://via.placeholder.com/150"/></td>
+                <td id="dogPicBox"><img class="pic" id="dogPic" src="https://via.placeholder.com/150"/></td>
                 <td id="dogContent">
                     <p id="dogP">
                         <strong>The love you get from a dog is unlike anythng else in the world, purer than human love.</strong>
@@ -126,7 +170,29 @@
                     <p class="catIcon">🗸 Maintenance</i></p>
                     <a href="https://en.wikipedia.org/wiki/Cat" target="blank"><button class="learnMoreBtn">Learn More</button></a>
                 </td>
-                <td id="catPicBox"><img id="catPic" src="https://via.placeholder.com/150"/></td>
+                <td class="pic" id="catPicBox"><img id="catPic" src="https://via.placeholder.com/150"/></td>
+            </tr>
+    </table>
+    <table id="turtleBox">
+            <tr class="turtleTitleRow">
+                <td id="turtleTitle" Colspan="2">But You Are Wrong</td>
+            </tr>
+            <tr class="turtleTitleRow">
+                    <td id="turtleTitleSmall" Colspan="2">Turtles FTW!</td>
+            </tr>
+            <tr id="turtleRow">
+                <td id="turtleContent">
+                    <label class="turtleLabel"><b>Easy Care</b></label>
+                    <p class="turtleInfo">Can eat dried food, live food, or pizza</p>
+                    <label class="turtleLabel"><b>Saves the World</b></label>
+                    <p class="turtleInfo">While you pick up dog poop</p>
+                    <label class="turtleLabel"><b>Get Along with Other Animals</b></label>
+                    <p class="turtleInfo">Especially rats</p>
+                    <label class="turtleLabel"><b>Heroes in a Half Shell</b></label>
+                    <p class="turtleInfo">With cool names such as Leonardo, Michelangelo, Donatello, and Raphael</p>
+                    <a href="https://en.wikipedia.org/wiki/Turtle" target="blank"><button class="learnMoreBtn">Learn More</button></a>
+                </td>
+                <td class="pic" id="turtlePicBox"><img id="turtlePic" src="https://via.placeholder.com/150"/></td>
             </tr>
     </table>
    </div> 
