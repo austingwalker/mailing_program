@@ -8,7 +8,7 @@
     #wrapper{
         padding: 20px;
         background: #eee;
-        width: 500px;
+        width: 600px;
     }
     .learnMoreBtn {
         background: rgb(187, 187, 187);
@@ -18,20 +18,22 @@
         border: none;
         padding: 15px;
         cursor: pointer;
+        width: 50%;
     }
-    /* .pic {
+    .pic {
         vertical-align: top;
-    } */
-    /* Dog vs Cat */
+    }
+    /* Dog vs Cat --------------------*/
     #dogvscatBox {
         width: 100%;
         padding: 20px;
-        margin:auto;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
         text-align: center;
+
         background: rgb(118, 77, 151);
     }
     #dogvscatTitle{
-        width: 100%;
         font-family: arial;
         font-size: 40px;
         color: white;
@@ -44,7 +46,12 @@
         vertical-align: top;
         padding-top: 5%;
     }
-    /* Dog  */
+    #dogandcatPic {
+        width: 275px;
+        height: 400px;
+        vertical-align: bottom;
+    }
+    /* Dog  --------------------*/
     #dogBox {
         padding: 20px;
         width: 100%;
@@ -53,22 +60,31 @@
     }
     #dogContent{
         vertical-align: top;
-        padding: 2.5%;
+        padding-left: 2.5%;
+        padding-right: 2.5%;
+    }
+    #dogPic {
+        width: 200px;
+        height: 135px;
     }
     #dogP{
         color: rgb(90, 89, 89);
         font-family: arial;
         font-size: 16px;
+        margin-top: 0;
+        line-height: 18px;
     }
     .dogIcon {
-        color:gray;
+        color:rgb(158, 157, 157);
         font-family: arial;
         font-size: 14px;
+        line-height: 75%;
     }
 
-    /* Cat */
+    /* Cat --------------------*/
     #catBox {
         padding: 20px;
+        padding-top: 10px;
         width: 100%;
         margin:auto;
         background: white
@@ -77,18 +93,25 @@
         vertical-align: top;
         padding: 2.5%;
     }
+    #catPic {
+        width: 200px;
+        height: 135px;
+    }
     #catP{
         color: rgb(90, 89, 89);
         font-family: arial;
         font-size: 16px;
+        margin-top: 0;
+        line-height: 18px;
     }
     .catIcon {
-        color:gray;
+        color:rgb(158, 157, 157);
         font-family: arial;
         font-size: 14px;
+        line-height: 75%;
     }
 
-    /* Turtle */
+    /* Turtle -------------------- */
     #turtleBox {
         padding: 20px;
         width: 100%;
@@ -114,22 +137,28 @@
         width: 100%;
         font-family: arial;
         font-size: 16px;
-        color: rgb(90, 89, 89);
-        padding: 20px;
+        color: rgb(158, 157, 157);
+        padding: 1px;
         text-align: center;
     }
     .turtleTitleRow{
         padding: 100px;
     }
     .turtleLabel {
-        color:gray;
+        color:rgb(90, 89, 89);
         font-family: arial;
         font-size: 16px;
     }
     .turtleInfo {
-        color:gray;
+        color:rgb(158, 157, 157);
         font-family: arial;
         font-size: 14px;
+        margin-top: 5px;
+    }
+    #turtlePic {
+        width: 275px;
+        height: 400px;
+        vertical-align: bottom;
     }
 </style>
 </head>
@@ -139,15 +168,14 @@
         <tr id="dogvscatTitleRow" >
             <td id="dogvscatTitle" Colspan="2">Dogs vs. Cats</td>
         </tr>
-            <tr id="dogvscatContentRow">
+        <tr id="dogvscatTRow">
             <td id="question">Who is our best friend? Let's Decide</td>
-            <!-- cid:dogandcat -->
-            <td id="dogandcatPicBox"><img class="pic" id="dogandcatPic" src="https://via.placeholder.com/150"/></td>
+            <td class="pic" id="dogandcatPicBox"><img id="dogandcatPic" src="cid:dogandcat"/></td>
         </tr>
     </table>
     <table id="dogBox">
             <tr id="dogRow">
-                <td id="dogPicBox"><img class="pic" id="dogPic" src="https://via.placeholder.com/150"/></td>
+                <td class="pic" id="dogPicBox"><img id="dogPic" src="cid:dog"/></td>
                 <td id="dogContent">
                     <p id="dogP">
                         <strong>The love you get from a dog is unlike anythng else in the world, purer than human love.</strong>
@@ -170,7 +198,7 @@
                     <p class="catIcon">🗸 Maintenance</i></p>
                     <a href="https://en.wikipedia.org/wiki/Cat" target="blank"><button class="learnMoreBtn">Learn More</button></a>
                 </td>
-                <td class="pic" id="catPicBox"><img id="catPic" src="https://via.placeholder.com/150"/></td>
+                <td class="pic" id="catPicBox"><img id="catPic" src="cid:cat"/></td>
             </tr>
     </table>
     <table id="turtleBox">
@@ -192,7 +220,7 @@
                     <p class="turtleInfo">With cool names such as Leonardo, Michelangelo, Donatello, and Raphael</p>
                     <a href="https://en.wikipedia.org/wiki/Turtle" target="blank"><button class="learnMoreBtn">Learn More</button></a>
                 </td>
-                <td class="pic" id="turtlePicBox"><img id="turtlePic" src="https://via.placeholder.com/150"/></td>
+                <td class="pic" id="turtlePicBox"><img id="turtlePic" src="cid:turtle"/></td>
             </tr>
     </table>
    </div> 
