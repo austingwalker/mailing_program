@@ -62,7 +62,6 @@ class Form extends Component {
       })
   }
   
-
   render() {
     return (
       <div id="formBox">
@@ -70,7 +69,7 @@ class Form extends Component {
           <Col className="col" md="3"/>
           <Col className="col formCol" md="6">
             <form id="form">
-              <label id="label">Select one or more address's to email:</label>
+              <label id="label">Select one or more addresses to email:</label>
               {
                 this.state.emailType.map((type, i) => {
                 return( <div className="form-check">
@@ -81,7 +80,7 @@ class Form extends Component {
                   </div>
                 )})
               }
-              <button type="submit" className="btn btn-primary emailBtn" onClick={this.handleFormSubmit}>Email</button>
+              <button type="submit" className="btn emailBtn" onClick={this.handleFormSubmit}>Email</button>
             </form>
           </Col>
           <Col className="col" md="3"/>

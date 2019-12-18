@@ -5,12 +5,11 @@ import "./Home.css";
 
 class Home extends Component {
   state = {
-    test: {},
   };
 
   render() {
     return (
-      <div id="homeBox">
+      <div>
         <Form/>
       </div>
     );

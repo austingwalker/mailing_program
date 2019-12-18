@@ -30,7 +30,6 @@
         padding-bottom: 0px;
         margin-bottom: 0px;
         text-align: center;
-
         background: rgb(118, 77, 151);
     }
     #dogvscatTitle{
@@ -160,6 +159,30 @@
         height: 400px;
         vertical-align: bottom;
     }
+    /* Media Queries -------------------- */
+    @media screen and (max-width: 400px) {
+        td {
+            display: block;
+        }
+        #question {
+            padding-top: 2.5%;
+            padding-bottom: 15%;
+        } 
+        #dogPic{
+            width: 100%;
+            height: 145px;
+        }  
+        #catPic{
+            width: 100%;
+            height: 145px;
+        }
+        #turtlePic{
+            width: 100%;
+        }
+        .learnMoreBtn {
+            width: 100%;
+        }
+    }
 </style>
 </head>
 <body>
@@ -169,7 +192,7 @@
             <td id="dogvscatTitle" Colspan="2">Dogs vs. Cats</td>
         </tr>
         <tr id="dogvscatTRow">
-            <td id="question">Who is our best friend? Let's Decide</td>
+            <td id="question">Who is our best friend? Let's Decide!</td>
             <td class="pic" id="dogandcatPicBox"><img id="dogandcatPic" src="cid:dogandcat"/></td>
         </tr>
     </table>
@@ -206,7 +229,7 @@
                 <td id="turtleTitle" Colspan="2">But You Are Wrong</td>
             </tr>
             <tr class="turtleTitleRow">
-                    <td id="turtleTitleSmall" Colspan="2">Turtles FTW!</td>
+                <td id="turtleTitleSmall" Colspan="2">Turtles FTW!</td>
             </tr>
             <tr id="turtleRow">
                 <td id="turtleContent">

@@ -15,13 +15,8 @@ if (process.env.NODE_ENV === "production") {
 }
 
 
-const test = {
-  success: "Test succesful!"
-}
-
 app.post("/api/email", function(req, res) {
-  // const emails = req.body.email.join(", ")
-  const emails = 'agwalker249@gmail.com'
+  const emails = req.body.email.join(", ")
   console.log(emails)
   const output = `
     <h1 style="color:red">Email Worked</h1>
@@ -90,7 +85,10 @@ app.post("/api/email", function(req, res) {
   // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
 }
 main().catch(console.error)
-  res.json(test) 
+const sucessful = {
+  success: "Succesful!"
+}
+res.json(sucessful) 
 });
 
 // Start the API server
